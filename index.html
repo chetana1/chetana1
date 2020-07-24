@@ -1,0 +1,88 @@
+<!doctype html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>
+        iFirst Assignment
+    </title>
+    <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<html>
+
+<body ng-app="myApp" ng-controller="MyController">
+    <div style="margin: 3rem;">
+        <button class="light-button" ng-click="toggleTheme('light')">Light theme</button>
+        <button class="dark-button" ng-click="toggleTheme('dark')">Dark theme</button>
+    </div>
+
+    <div class="row rowCard">
+        <div class="column">
+            <div class="card">
+                <h3 class="title">My Profile</h3>
+                <p class="sub-title">Check out each column for more details</p>
+                <div class="row">
+                    <div class="img-column">
+                        <img ng-src= "img/i3.png"/>
+                    </div>
+                    <div style = "width: auto;"class="column-client column">
+                        <div class="profile-title ">
+                            John Deo
+                        </div>
+                        <div class="profile-designation">
+                            Senior Project Manager
+                        </div>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="card card-statistic">
+                <h3 class="title">Statistic</h3>
+                <p class="sub-title">Check out each column for more details</p>
+                
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card card-client">
+                <h3 class="title">My Clients</h3>
+                <p class="sub-title">Check out each column for more details</p>
+               <div ng-repeat="client in clientObj">
+                <div style="margin-bottom: 2rem;"class="row">
+                    <div class="img-column">
+                        <img ng-src= "{{client.image}}"/>
+                    </div>
+                    <div class="column-client">
+                        <div class="client-container">
+                            {{client.name}}
+                        </div>
+                        <div class="client-designation ">
+                            {{client.designation}}
+                        </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card card-client">
+                <h3 class="title">Change Password</h3>
+                <p class="sub-title">Check out each column for more details</p>
+                <label class="form-label" for="pwd">New Password </label>
+                <input type="password" ng-model="formObj.newPassword" id="pwd" name="pwd">
+                <label class="form-label" for="pwd">Repeat Password </label>
+                <input type="password" ng-model="formObj.repeatPassword" id="pwdd" name="pwwd">
+                <button type="submit" ng-click="checkPassword(formObj)">Submit</button>
+                <p class="profile-designation">Need to contain at least one uppercase (return the result here)</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

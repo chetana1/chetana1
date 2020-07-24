@@ -1,0 +1,26 @@
+[
+    {
+      "id": "001",
+      "name": "Jack Neo",
+      "designation": "Java Developer",
+      "image": "../img/i1.png"
+    },
+    {
+      "id": "002",
+      "name": "Alex Ferguson",
+      "designation": "IT Director",
+      "image": "../img/i2.png"
+    },
+    {
+      "id": "003",
+      "name": "Walker Fedora",
+      "designation": "Senior Project Manager",
+      "image": "../img/i3.png"
+    },
+    {
+      "id": "004",
+      "name": "Ramirez Glasgow",
+      "designation": "Senior Project Manager",
+      "image": "../img/i4.png"
+    }
+]
